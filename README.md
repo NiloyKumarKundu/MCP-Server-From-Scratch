@@ -1,6 +1,6 @@
 # MCP-Server-From-Scratch
 
-A comprehensive learning repository for understanding and implementing Model Context Protocol (MCP) servers from the ground up. This repository contains all the essential files, examples, and documentation needed to master MCP server development.
+A comprehensive learning repository for understanding and implementing Model Context Protocol (MCP) servers from the ground up. This repository contains all the essential files, examples, and documentation needed to master MCP server development using the **FastMCP library**.
 
 ## 📚 What You'll Learn
 
@@ -23,6 +23,7 @@ This repository provides hands-on experience with:
 
 ## 🛠️ Technologies Covered
 
+- **FastMCP Library**: Python-based framework for simplified MCP server and client development
 - Model Context Protocol (MCP) specification
 - Server-side implementation patterns
 - Client-server communication protocols
