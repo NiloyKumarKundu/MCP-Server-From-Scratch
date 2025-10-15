@@ -1,6 +1,6 @@
 # MCP Server From Scratch
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
 [![FastMCP](https://img.shields.io/badge/FastMCP-2.12.4-green.svg)](https://gofastmcp.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
