@@ -1,136 +1,207 @@
 # MCP Server From Scratch
 
-A comprehensive learning repository for understanding and implementing Model Context Protocol (MCP) servers from the ground up. This repository provides all the essential files, examples, and documentation needed to master MCP server development using the **FastMCP library**.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![FastMCP](https://img.shields.io/badge/FastMCP-2.12.4-green.svg)](https://gofastmcp.com)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## Table of Contents
+A comprehensive learning repository for building Model Context Protocol (MCP) servers from the ground up. Master MCP development through 8 progressive examples, from basic local servers to advanced cloud-integrated applications with real-world expense tracking.
 
-- [MCP Server From Scratch](#mcp-server-from-scratch)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-    - [What You'll Learn](#what-youll-learn)
-  - [Prerequisites](#prerequisites)
-  - [Quick Start](#quick-start)
-    - [1. Clone the Repository](#1-clone-the-repository)
-    - [2. Install Dependencies](#2-install-dependencies)
-    - [3. Run Your First MCP Server](#3-run-your-first-mcp-server)
-  - [Development Workflow](#development-workflow)
-    - [Debugging with MCP Inspector](#debugging-with-mcp-inspector)
-    - [Running MCP Servers](#running-mcp-servers)
-    - [Installing in Claude Desktop](#installing-in-claude-desktop)
-  - [Repository Structure](#repository-structure)
-  - [Learning Path](#learning-path)
-  - [Technologies](#technologies)
-  - [Contributing](#contributing)
-  - [License](#license)
-
-## Overview
-
-This repository is designed for developers who want to understand MCP servers from the fundamentals. Each example builds upon the previous one, providing a progressive learning path from basic concepts to advanced implementations.
-
-### What You'll Learn
-
-- **Local MCP Server Development**: Create and configure MCP servers that run locally
-- **Remote MCP Server Implementation**: Build and deploy MCP servers for remote access
-- **Custom MCP Client Creation**: Develop clients to interact with MCP servers
-- **Best Practices**: Follow industry standards for MCP server development
-- **Real-world Examples**: Work with practical examples demonstrating various MCP patterns
-
-## Prerequisites
-
-- Python 3.8 or higher
-- `uv` package manager
-- Basic understanding of Python and web protocols
-- Familiarity with JSON-RPC concepts (helpful but not required)
-
-## Quick Start
-
-### 1. Clone the Repository
+## 🚀 Quick Start
 
 ```bash
+# Clone and setup
 git clone <repository-url>
 cd MCP-Server-From-Scratch
-```
-
-### 2. Install Dependencies
-
-```bash
 uv sync
+
+# Run your first MCP server
+uv run fastmcp run "1.Basic_Local_Server.py"
+
+# Debug with MCP Inspector
+uv run fastmcp dev "2.Expense_Tracker_Local_Server.py"
 ```
 
-### 3. Run Your First MCP Server
+## 📚 Learning Path
 
-```bash
-uv run fastmcp run "1. Basic Local Server.py"
-```
+This repository follows a **progressive 8-step learning approach**:
 
-## Development Workflow
+### **Phase 1: Foundations**
 
-### Debugging with MCP Inspector
+- **[1.Basic_Local_Server.py](1.Basic_Local_Server.py)** - Simple local MCP server with basic tools
+- **[2.Expense_Tracker_Local_Server.py](2.Expense_Tracker_Local_Server.py)** - Local server with SQLite database
+- **[3.Basic_Remote_Server.py](3.Basic_Remote_Server.py)** - HTTP-based remote server
 
-Use the MCP Inspector for debugging and development:
+### **Phase 2: Real-World Applications**
 
-```bash
-uv run fastmcp dev <filename>
-```
+- **[4.Expense_Tracker_Remote_Server.py](4.Expense_Tracker_Remote_Server.py)** - Async remote server with advanced features
+- **[5.Use_Custom_Server_Free_in_Claude-Desktop.py](5.Use_Custom_Server_Free_in_Claude-Desktop.py)** - Claude Desktop integration
 
-### Running MCP Servers
+### **Phase 3: Advanced Patterns**
 
-Start your MCP server in production mode:
+- **[6.Client_Using_Config_File.py](6.Client_Using_Config_File.py)** - MCP client with configuration
+- **[7.Build_Expense_Tracker_SSE_Server.py](7.Build_Expense_Tracker_SSE_Server.py)** - Server-Sent Events transport
+- **[8.Build_Expense_Tracker_SSE_Client.py](8.Build_Expense_Tracker_SSE_Client.py)** - SSE client implementation
 
-```bash
-uv run fastmcp run <filename>
-```
+## 🛠️ What You'll Learn
 
-### Installing in Claude Desktop
+### **Core MCP Concepts**
 
-Install your MCP server in Claude Desktop for integration:
+- **Local vs Remote Servers** - STDIO vs HTTP transport protocols
+- **Tools & Resources** - Building interactive MCP capabilities
+- **Async Operations** - Modern Python async/await patterns
+- **Database Integration** - SQLite with aiosqlite for async operations
 
-```bash
-uv run fastmcp install claude-desktop <filename>
-```
+### **Advanced Features**
 
-## Repository Structure
+- **Server-Sent Events (SSE)** - Real-time communication patterns
+- **Cloud Integration** - FastMCP Cloud proxy connections
+- **Claude Desktop** - Custom server integration
+- **Client Development** - Building MCP clients with memory and conversation
+
+### **Real-World Skills**
+
+- **Expense Tracking System** - Complete CRUD application
+- **Category Management** - JSON-based configuration system
+- **Error Handling** - Production-ready exception management
+- **Configuration Management** - Flexible server setup
+
+## 📁 Repository Structure
 
 ```
 MCP-Server-From-Scratch/
-├── 1. Basic Local Server.py    # Basic MCP server implementation
-├── pyproject.toml              # Project configuration
-├── uv.lock                     # Dependency lock file
-├── README.md                   # This file
-└── LICENSE                     # License information
+├── 📄 1.Basic_Local_Server.py              # Basic MCP server with dice & math tools
+├── 📄 2.Expense_Tracker_Local_Server.py     # Local expense tracker with SQLite
+├── 📄 3.Basic_Remote_Server.py             # HTTP remote server with resources
+├── 📄 4.Expense_Tracker_Remote_Server.py  # Async remote expense tracker
+├── 📄 5.Use_Custom_Server_Free_in_Claude-Desktop.py  # Claude Desktop integration
+├── 📄 6.Client_Using_Config_File.py        # MCP client with Groq LLM
+├── 📄 7.Build_Expense_Tracker_SSE_Server.py  # SSE transport server
+├── 📄 8.Build_Expense_Tracker_SSE_Client.py  # SSE client implementation
+├── 📁 config/
+│   └── expense_tracker.json                # MCP client configuration
+├── 📄 categories.json                      # Expense categories configuration
+├── 📄 expense.db                          # SQLite database (auto-generated)
+├── 📄 pyproject.toml                      # Project dependencies
+└── 📄 README.md                           # This documentation
 ```
 
-## Learning Path
+## 🚀 Development Workflow
 
-This repository follows a progressive learning approach:
+### **Running MCP Servers**
 
-1. **Basic Local Server** - Start with a simple local MCP server
-2. **Advanced Features** - Add tools, resources, and prompts
-3. **Remote Implementation** - Deploy servers for remote access
-4. **Client Development** - Create custom MCP clients
-5. **Best Practices** - Learn production-ready patterns
+```bash
+# Local server (STDIO transport)
+uv run fastmcp run "1.Basic_Local_Server.py"
 
-## Technologies
+# Remote server (HTTP transport)
+uv run fastmcp run "3.Basic_Remote_Server.py"
 
-- **FastMCP Library**: Python-based framework for MCP development
-- **Model Context Protocol (MCP)**: Standard protocol for AI model interactions
-- **JSON-RPC**: Communication protocol for client-server interactions
-- **Python**: Primary development language
-- **uv**: Modern Python package manager
+# Debug with MCP Inspector
+uv run fastmcp dev "2.Expense_Tracker_Local_Server.py"
+```
 
-## Contributing
+### **Installing in Claude Desktop**
+
+```bash
+# Install custom server in Claude Desktop
+uv run fastmcp install claude-desktop "5.Use_Custom_Server_Free_in_Claude-Desktop.py"
+
+# Restart Claude Desktop to load the server
+```
+
+### **Running SSE Server-Client**
+
+```bash
+# Terminal 1: Start SSE server
+uv run "7.Build_Expense_Tracker_SSE_Server.py"
+
+# Terminal 2: Run SSE client
+uv run "8.Build_Expense_Tracker_SSE_Client.py"
+```
+
+## 💡 Key Features
+
+### **Expense Tracker Application**
+
+- **Complete CRUD Operations** - Add, list, and summarize expenses
+- **Date Range Filtering** - Query expenses by date ranges
+- **Category Management** - Hierarchical expense categories
+- **Async Database Operations** - High-performance SQLite with aiosqlite
+- **Error Handling** - Robust exception management
+
+### **Transport Protocols**
+
+- **STDIO** - Local communication (Claude Desktop)
+- **HTTP** - Remote server access
+- **SSE** - Real-time server-sent events
+
+### **Cloud Integration**
+
+- **FastMCP Cloud** - Deploy servers to the cloud
+- **Proxy Connections** - Connect to remote MCP servers
+- **Claude Desktop** - Seamless integration with Claude
+
+## 🛠️ Technologies
+
+- **[FastMCP](https://gofastmcp.com)** - Modern Python MCP framework
+- **[SQLite](https://sqlite.org)** - Embedded database with aiosqlite
+- **[Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)** - Real-time communication
+- **[Claude Desktop](https://claude.ai/desktop)** - AI assistant integration
+- **[uv](https://github.com/astral-sh/uv)** - Fast Python package manager
+
+## 📖 Usage Examples
+
+### **Basic Server Tools**
+
+```python
+# Dice rolling
+roll_dice(n_dice=3)  # Returns: [4, 2, 6]
+
+# Math operations
+add(15.5, 4.3)  # Returns: 19.8
+```
+
+### **Expense Tracking**
+
+```python
+# Add expense
+add_expense(
+    date="2025-01-15",
+    amount=25.50,
+    category="Food & Dining",
+    subcategory="groceries",
+    note="Weekly grocery shopping"
+)
+
+# List expenses
+list_expenses("2025-01-01", "2025-01-31")
+
+# Summarize by category
+summarize("2025-01-01", "2025-01-31", category="Food & Dining")
+```
+
+## 🔧 Prerequisites
+
+- **Python 3.8+** - Modern Python with async support
+- **uv** - Fast Python package manager
+- **Basic Python knowledge** - Functions, classes, async/await
+- **Optional**: Claude Desktop for integration testing
+
+## 🤝 Contributing
 
 We welcome contributions! Please feel free to:
 
-- Report bugs
-- Suggest new features
-- Submit pull requests
-- Improve documentation
+- 🐛 **Report bugs** - Help us improve the examples
+- 💡 **Suggest features** - Propose new learning examples
+- 📝 **Improve documentation** - Make the learning path clearer
+- 🔧 **Submit pull requests** - Add your own MCP implementations
 
-## License
+## 📄 License
 
-This project is licensed under the terms specified in the [LICENSE](LICENSE) file.
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
 
 ---
 
-**Ready to start building MCP servers?** Begin with the `1. Basic Local Server.py` file and follow the progressive examples to master MCP server development.
+**🎯 Ready to master MCP development?** Start with `1.Basic_Local_Server.py` and progress through all 8 examples to become an MCP expert!
+
+**📚 Learn more**: [FastMCP Documentation](https://gofastmcp.com) | [MCP Specification](https://modelcontextprotocol.io)
