@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "Expense Tracker": {
+      "command": "/home/sol-73/miniconda3/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "fastmcp",
+        "fastmcp",
+        "run",
+        "/home/sol-73/Niloy/My_git/MCP-Server-From-Scratch/2.Expense_Tracker_Local_Server.py"
+      ],
+      "env": {},
+      "transport": "stdio",
+      "type": null,
+      "cwd": null,
+      "timeout": null,
+      "description": null,
+      "icon": null,
+      "authentication": null
+    }
+  }
+}
