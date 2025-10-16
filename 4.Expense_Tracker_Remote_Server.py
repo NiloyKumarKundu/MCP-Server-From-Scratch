@@ -4,7 +4,7 @@ import aiosqlite  # Changed: sqlite3 → aiosqlite
 import tempfile
 
 # Use temporary directory which should be writable
-TEMP_DIR = tempfile.gettempdir()
+TEMP_DIR = tempfile.gettempdir() # This is a temporary directory for the deployment purpose in the FastMCP Cloud
 DB_PATH = os.path.join(TEMP_DIR, "expenses.db")
 CATEGORIES_PATH = os.path.join(os.path.dirname(__file__), "categories.json")
 
